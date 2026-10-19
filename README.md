@@ -1,4 +1,4 @@
-# **F1 Race Strategy Predictor**
+# **BoxBoxRL - A F1 Race Strategy Predictor**
 
 Have you ever yelled at your TV when a Formula 1 team completely botches a pit stop strategy? I definitely have. 
 
