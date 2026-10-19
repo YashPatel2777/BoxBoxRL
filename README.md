@@ -1,4 +1,4 @@
-# BoxBoxRL — Formula 1 Race Strategy Predictor & Multi-Agent RL Simulation
+# BoxBoxRL - Formula 1 Race Strategy Predictor & Multi-Agent RL Simulation
 
 An end-to-end **Multi-Agent Reinforcement Learning (MARL)** race strategy engine and high-fidelity telemetry visualizer for Formula 1. 
 
