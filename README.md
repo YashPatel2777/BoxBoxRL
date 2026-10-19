@@ -1,4 +1,4 @@
-# 🏎️ BoxBoxRL — Formula 1 Race Strategy Predictor & Multi-Agent RL Simulation
+# BoxBoxRL — Formula 1 Race Strategy Predictor & Multi-Agent RL Simulation
 
 An end-to-end **Multi-Agent Reinforcement Learning (MARL)** race strategy engine and high-fidelity telemetry visualizer for Formula 1. 
 
@@ -6,7 +6,7 @@ Instead of relying on rigid, pre-programmed pit window heuristics, **BoxBoxRL** 
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
 - [Real Data vs. Simulation Modeling](#-real-data-vs-simulation-modeling)
@@ -25,7 +25,7 @@ Instead of relying on rigid, pre-programmed pit window heuristics, **BoxBoxRL** 
 
 ---
 
-## ⚡ Key Features
+## Key Features
 
 - **Real-World Telemetry Pipeline**: Automatically downloads and caches official Formula 1 session telemetry, lap deltas, tire compound stints, and weather conditions via `FastF1`.
 - **Compound Degradation Modeling**: Fits polynomial regression curves to empirical lap times per circuit and compound (Soft, Medium, Hard), isolating fuel burn-off effects from pure tire wear.
@@ -39,7 +39,7 @@ Instead of relying on rigid, pre-programmed pit window heuristics, **BoxBoxRL** 
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -63,7 +63,7 @@ flowchart TD
 
 ---
 
-## ⚖️ Real Data vs. Simulation Modeling
+## Real Data vs. Simulation Modeling
 
 To preserve realism while maintaining RL training speed, BoxBoxRL blends empirical F1 telemetry with stochastic simulation assumptions:
 
@@ -81,7 +81,7 @@ To preserve realism while maintaining RL training speed, BoxBoxRL blends empiric
 
 ---
 
-## 📂 Project Directory Structure
+## Project Directory Structure
 
 ```text
 F1_Race_Strategy_Predictor/
@@ -134,7 +134,7 @@ F1_Race_Strategy_Predictor/
 
 ---
 
-## 💻 Hardware & Acceleration (CPU vs. GPU)
+## Hardware & Acceleration (CPU vs. GPU)
 
 The PPO agent uses a Multi-Layer Perceptron (`MlpPolicy`). For RL environments where stepping the simulator environment is the bottleneck:
 
@@ -153,7 +153,7 @@ python -c "import torch; print('CUDA Available:', torch.cuda.is_available()); pr
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 - **Python**: 3.10, 3.11, or 3.12 (64-bit)
@@ -197,7 +197,7 @@ Ensure your shell recognizes the root repository directory:
 
 ---
 
-## 🏁 Running the Pipeline
+## Running the Pipeline
 
 ### 1. Automated Master Script (Recommended)
 Run all 10 pipeline steps sequentially with a single command:
@@ -277,7 +277,7 @@ python scripts/top_10_drivers.py
 
 ---
 
-## ⚙️ Configuration & Track Database
+## Configuration & Track Database
 
 ### `config.yaml`
 Control global runtime settings, active circuit, seasons, and PPO hyperparameters:
@@ -319,7 +319,7 @@ Contains circuit-specific metadata such as total laps, pit lane transit delta, b
 
 ---
 
-## 🧠 Reinforcement Learning Mechanics & Reward Design
+## Reinforcement Learning Mechanics & Reward Design
 
 The PPO agent observes the complete operational state of the car and competitor field on every lap:
 
@@ -349,7 +349,7 @@ The PPO agent observes the complete operational state of the car and competitor 
 
 ---
 
-## 📊 Outputs & Generated Artifacts
+## Outputs & Generated Artifacts
 
 Generated assets are systematically organized into the `outputs/` directory:
 
@@ -364,7 +364,7 @@ Generated assets are systematically organized into the `outputs/` directory:
 
 ---
 
-## 🧪 Running Unit Tests
+## Running Unit Tests
 
 The test suite validates data ingestion, degradation regression accuracy, simulator physics, and RL environment constraints:
 
@@ -381,6 +381,6 @@ pytest tests/test_environment.py -v
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the [MIT License](LICENSE). Telemetry and timing data are fetched for educational, research, and non-commercial simulation purposes via the `FastF1` open-source library. Formula 1 and related marks are trademarks of Formula One Licensing B.V.
