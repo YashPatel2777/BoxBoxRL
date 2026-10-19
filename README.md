@@ -1,4 +1,4 @@
-# BoxBoxRL - Formula 1 Race Strategy Predictor & Multi-Agent RL Simulation
+# BoxBoxRL: Formula 1 Race Strategy Predictor & Multi-Agent RL Simulation
 
 An end-to-end **Multi-Agent Reinforcement Learning (MARL)** race strategy engine and high-fidelity telemetry visualizer for Formula 1. 
 
@@ -141,9 +141,9 @@ The PPO agent uses a Multi-Layer Perceptron (`MlpPolicy`). For RL environments w
 - **CPU Training (Default & Highly Recommended)**: Python environment execution and rollout buffer collection operate with minimal overhead on modern multi-core CPUs.
 - **GPU Training (NVIDIA CUDA)**: Supported via `device: auto`. If you have an NVIDIA GPU (e.g. RTX 3050+) with CUDA drivers installed, PyTorch will leverage CUDA acceleration during gradient updates.
 
-### PyTorch GPU (CUDA 12.4) Setup:
+### PyTorch GPU (CUDA 13.2) Setup:
 ```powershell
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
 ```
 
 Verify CUDA recognition:
@@ -162,8 +162,8 @@ python -c "import torch; print('CUDA Available:', torch.cuda.is_available()); pr
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/YashPatel2777/F1_Race_Strategy_Predictor.git
-cd F1_Race_Strategy_Predictor
+git clone https://github.com/YashPatel2777/BoxBoxRL.git
+cd BoxBoxRL
 ```
 
 ### 3. Create & Activate a Virtual Environment
